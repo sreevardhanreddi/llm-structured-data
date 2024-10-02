@@ -1,0 +1,12 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/code/app
+    env_file:
+      - .env
+    ports:
+      - 8001:80
+    restart: always
